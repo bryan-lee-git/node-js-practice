@@ -18,7 +18,7 @@
 
 // --- path -------------------------------------------------
 
-//this method of requiring by using "path" gives you an object with the current folder instead of having to list a string of the desired file path
+// this method of requiring by using "path" gives you an object with the current folder instead of having to list a string of the desired file path
 
 // const path = require("path");
 // var pathObj = path.parse(__filename);
@@ -273,3 +273,55 @@
 // });
 
 // server.listen(3001);
+
+// --- read data from a file and log it ---------------------------------------------
+
+// var fs = require("fs");
+
+// fs.readFile("Unsolved/best_things_ever.txt", "utf8", (error, data) => {
+//     if (error) throw err;
+//     var dataArr = data.split(",");
+//     dataArr.forEach((item) => {
+//         console.log(item);
+//     })
+// });
+
+// --- npm and http requests ---------------------------------------------
+
+// npm init will create a package.json
+// npm i will install packages
+
+// var request = require("request");
+
+// request("https://en.wikipedia.org/wiki/Kudos_(granola_bar)", function(error, response, body) {
+//   if (!error && response.statusCode === 200) {
+//     console.log(body);
+//   }
+// });
+
+// --- learning packages and requests with OMDB ---------------------------------------------
+
+// var request = require("request");
+// var nodeArgs = process.argv;
+// var movieName = "";
+
+// for (var i = 2; i < nodeArgs.length; i++) {
+//     if (i > 2 && i < nodeArgs.length) {
+//       movieName = movieName + "+" + nodeArgs[i];
+//     }
+//     else {
+//       movieName += nodeArgs[i];
+//     }
+// }
+
+// var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
+
+// request(queryUrl, function(error, response, body) {
+//   if (!error && response.statusCode === 200) {
+//     var data = JSON.parse(body);
+//     console.log("The movie's title is: " + data.Title);
+//     console.log("The movie's IMDB rating is: " + data.imdbRating);
+//     console.log("The movie is rated " + data.Rated);
+//     console.log("The movie's release year is: " + data.Year);
+//   }
+// });
