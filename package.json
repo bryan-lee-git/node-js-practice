@@ -1,0 +1,22 @@
+{
+  "name": "js-practice",
+  "version": "1.0.0",
+  "description": "Lots of basic Node.js practice code snippets for understanding things like: core modules, path, http, os, totalmem, freemem, fs, synchronous vs. asynchronous, event emitters, event listeners, servers, timers, streams, and more.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan-lee-git/node-js-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryan-lee-git/node-js-practice/issues"
+  },
+  "homepage": "https://github.com/bryan-lee-git/node-js-practice#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
